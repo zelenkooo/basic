@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Specific configuration needed for the JBoss deployment-->
+<!DOCTYPE jboss-web>
+<jboss-web>
+  <context-root>/jboss</context-root>
+</jboss-web>
