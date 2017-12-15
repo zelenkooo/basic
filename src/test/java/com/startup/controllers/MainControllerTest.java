@@ -26,7 +26,7 @@ public class MainControllerTest {
     ResponseEntity<String> entity = this.restTemplate.getForEntity("/", String.class);
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(entity.getHeaders().getContentType())
-            .isEqualTo(MediaType.valueOf("text/plain;charset=UTF-8"));
+            .isEqualTo(MediaType.valueOf("text/html;charset=UTF-8"));
     assertThat(entity.getBody()).contains("Hello World !");
   }
 
