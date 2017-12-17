@@ -7,9 +7,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.DispatcherServlet;
 
 @SpringBootApplication
+@EnableJpaRepositories
 public class AlphaApplication extends SpringBootServletInitializer {
 
   public static void main(String[] args) {
