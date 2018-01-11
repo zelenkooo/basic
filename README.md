@@ -10,3 +10,4 @@ Starting application :
 - compile code using maven ( mvn clean install )
 - run app using ( mvn spring-boot:run )
 - check is page available at localhost:8080
+- check if db is available at http://localhost:8080/h2_console ( jdbc url : jdbc:h2:mem:testdb ) user: sa
