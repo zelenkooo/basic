@@ -23,7 +23,7 @@ public class MainControllerTest {
 
   @Test
   public void indexTest() {
-    ResponseEntity<String> entity = this.restTemplate.getForEntity("/", String.class);
+    ResponseEntity<String> entity = restTemplate.getForEntity("/", String.class);
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(entity.getHeaders().getContentType())
             .isEqualTo(MediaType.valueOf("text/html;charset=UTF-8"));
@@ -32,7 +32,7 @@ public class MainControllerTest {
 
   @Test
   public void testCss() throws Exception {
-    ResponseEntity<String> entity = this.restTemplate.getForEntity(
+    ResponseEntity<String> entity = restTemplate.getForEntity(
             "/css/style.css", String.class);
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(entity.getHeaders().getContentType())
@@ -41,7 +41,7 @@ public class MainControllerTest {
 
   @Test
   public void testJs() throws Exception {
-    ResponseEntity<String> entity = this.restTemplate.getForEntity(
+    ResponseEntity<String> entity = restTemplate.getForEntity(
             "/js/init.js", String.class);
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(entity.getHeaders().getContentType())
