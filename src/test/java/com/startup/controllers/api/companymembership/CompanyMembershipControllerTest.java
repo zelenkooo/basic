@@ -1,6 +1,8 @@
 package com.startup.controllers.api.companymembership;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.startup.AlphaApplication;
+import com.startup.config.SecurityConfig;
 import com.startup.controllers.api.user.User;
 import com.startup.controllers.api.user.UserRepository;
 import org.junit.Before;
@@ -11,6 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -31,9 +34,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
+
 @RunWith(SpringRunner.class)
 @WebMvcTest(CompanyMembershipController.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@ContextConfiguration(classes={AlphaApplication.class, SecurityConfig.class})
 public class CompanyMembershipControllerTest {
 
   @Autowired

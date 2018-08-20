@@ -32,11 +32,11 @@ public class EmailRouteTest {
   @Test
   public void test() throws InterruptedException {
 
-    mockCamel.expectedMessageCount(2);
+    mockCamel.expectedMessageCount(1);
 
     String body = "Good Day Future Partner,\n";
     String subject = "My subject";
-    String address[] = {"to_email@me.com","to_email2@me.com"};
+    String address[] = {"to_email@me.com"};
 
     for ( int i = 0 ; i<address.length ; i++){
 

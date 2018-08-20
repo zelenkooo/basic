@@ -23,7 +23,7 @@ public class MainControllerTest {
 
   @Test
   public void indexTest() {
-    ResponseEntity<String> entity = restTemplate.getForEntity("/", String.class);
+    ResponseEntity<String> entity = restTemplate.withBasicAuth("user","password").getForEntity("/", String.class);
     assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(entity.getHeaders().getContentType())
             .isEqualTo(MediaType.valueOf("text/html;charset=UTF-8"));
